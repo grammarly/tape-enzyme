@@ -30,7 +30,7 @@ function instanceComponent(wrapper, inst, msg) {
   this.instanceOf(wrapper.instance(), inst, msg)
 }
 
-function isComponent(wrapper, selector, msg) {
+function isSelector(wrapper, selector, msg) {
   this.isTrue(wrapper.is(selector), msg)
 }
 
@@ -60,6 +60,6 @@ function type(wrapper, value, msg) {
 
 export default {
   hasClass, contains, containsMatchingElement, containsAllMatchingElements,
-  everyComponent, everyComponentWhere, html, instanceComponent, isComponent,
+  everyComponent, everyComponentWhere, html, instanceComponent, isSelector,
   checkKey, checkName, prop, state, text, type
 }

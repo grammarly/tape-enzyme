@@ -1,8 +1,11 @@
 import Tape from 'tape'
-import CommonUtils from './utils/common'
-import EnzymeUtils from './utils/enzyme'
+import commonUtils from './utils/common'
+import enzymeUtils from './utils/enzyme'
+import wrapper from './utils/wrapper'
 
-[EnzymeUtils, CommonUtils].forEach(utils =>
+[enzymeUtils, commonUtils].forEach(utils =>
   Object.keys(utils).forEach(key => Tape.Test.prototype[key] = utils[key]))
+
+Tape.Test.prototype.wrapper = wrapper
 
 export default Tape
