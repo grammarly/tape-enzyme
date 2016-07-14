@@ -17,7 +17,7 @@ import test from '@grammarly-npm/tape-enzyme'
 
 ### Simple Api
 
-##### .isTrue(value, [message])
+#### .isTrue(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -28,7 +28,7 @@ Check that `value` is `true`.
   t.isTrue(true, 'should be true')
 ```
 
-##### .isFalse(value, [message])
+#### .isFalse(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -39,7 +39,7 @@ Check that `value` is `false`.
   t.isFalse(false, 'should be false')
 ```
 
-##### .typeOf(value, type, [message])
+#### .typeOf(value, type, [message])
 
 * @param { Mixed } value
 * @param { String } name
@@ -59,7 +59,7 @@ Check that `value`’s type is `name`, as determined by `Object.prototype.toStri
   t.typeOf(undefined, 'undefined', 'should be an undefined')
 ```
 
-##### .notTypeOf(value, type, [message])
+#### .notTypeOf(value, type, [message])
 
 * @param { Mixed } value
 * @param { String } typeof name
@@ -71,7 +71,7 @@ Check that `value`’s type is not `name`, as determined by `Object.prototype.to
   t.notTypeOf('tea', 'number', 'string should not be number')
 ```
 
-##### .instanceOf(value, constructor, [message])
+#### .instanceOf(value, constructor, [message])
 
 * @param { Object } object
 * @param { Constructor } constructor
@@ -83,7 +83,7 @@ Check that `value` is an instance of `constructor`.
   t.instanceOf(new Date(), Date, 'should be instance of Date')
 ```
 
-##### .notInstanceOf(value, constructor, [message])
+#### .notInstanceOf(value, constructor, [message])
 
 * @param { Object } object
 * @param { Constructor } constructor
@@ -95,7 +95,7 @@ Check that `value` is not an instance of `constructor`.
   t.notInstanceOf(new Date(), String, 'should not be an instance of String')
 ```
 
-##### .isObject(value, [message])
+#### .isObject(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -106,7 +106,7 @@ Check that `value` is an object of type `'Object'` (as revealed by `Object.proto
   t.isObject({foo: 1, bar: 2}, 'should be object')
 ```
 
-##### .isNotObject(value, [message])
+#### .isNotObject(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -117,7 +117,7 @@ Check that `value` is not an object of type `'Object'` (as revealed by `Object.p
   t.isNotObject('object', 'should not be object')
 ```
 
-##### .isArray(value, [message])
+#### .isArray(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -128,7 +128,7 @@ Check that `value` is an array.
   t.isArray([1, 2, 3], 'should be array')
 ```
 
-##### .isNotArray(value, [message])
+#### .isNotArray(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -139,7 +139,7 @@ Check that `value` is not an array.
  t.isNotArray('foo', 'should not be array')
 ```
 
-##### .isString(value, [message])
+#### .isString(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -150,7 +150,7 @@ Check that `value` is a string.
   t.isString('foo', 'should be string')
 ```
 
-##### .isNotString(value, [message])
+#### .isNotString(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -161,7 +161,7 @@ Check that `value` is not a string.
   t.isNotString({foo: 1}, 'should not be string')
 ```
 
-##### .isNumber(value, [message])
+#### .isNumber(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -172,7 +172,7 @@ Check that `value` is a number.
   t.isNumber(1, 'should be number')
 ```
 
-##### .isNotNumber(value, [message])
+#### .isNotNumber(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -183,7 +183,7 @@ Check that `value` is not a number.
   t.isNotNumber('1', 'should not be number')
 ```
 
-##### .isBoolean(value, [message])
+#### .isBoolean(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
@@ -194,7 +194,7 @@ Check that `value` is a boolean.
   t.isNumber(true, 'should be boolean')
 ```
 
-##### .isNotBoolean(value, [message])
+#### .isNotBoolean(value, [message])
 
 * @param { Mixed } value
 * @param { String } message
