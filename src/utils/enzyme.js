@@ -6,6 +6,10 @@ function contains(wrapper, node, msg) {
   this.isTrue(wrapper.contains(node), msg)
 }
 
+function notContains(wrapper, node, msg) {
+  this.isFalse(wrapper.contains(node), msg)
+}
+
 function containsMatchingElement(wrapper, node, msg) {
   this.isTrue(wrapper.containsMatchingElement(node), msg)
 }
@@ -22,6 +26,10 @@ function everyComponent(wrapper, selector, msg) {
   this.isTrue(wrapper.every(selector), msg)
 }
 
+function notEveryComponent(wrapper, selector, msg) {
+  this.isFalse(wrapper.every(selector), msg)
+}
+
 function everyComponentWhere(wrapper, cb, msg) {
   this.isTrue(wrapper.everyWhere(cb), msg)
 }
@@ -36,6 +44,10 @@ function instanceComponent(wrapper, inst, msg) {
 
 function isSelector(wrapper, selector, msg) {
   this.isTrue(wrapper.is(selector), msg)
+}
+
+function isNotSelector(wrapper, selector, msg) {
+  this.isFalse(wrapper.is(selector), msg)
 }
 
 function checkKey(wrapper, key, msg) {
@@ -65,5 +77,6 @@ function type(wrapper, value, msg) {
 export default {
   hasClass, contains, containsMatchingElement, containsAllMatchingElements,
   everyComponent, everyComponentWhere, html, instanceComponent, isSelector,
-  checkKey, checkName, prop, state, text, type, containsAnyMatchingElements
+  checkKey, checkName, prop, state, text, type, containsAnyMatchingElements,
+  notEveryComponent, isNotSelector, notContains
 }
