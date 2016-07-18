@@ -168,6 +168,19 @@ Check if the current node has a `className` prop including the passed in class n
 
 * `.hasClass()` expects a class name, NOT a CSS selector. `.hasClass('.foo')` should be `.hasClass('foo')`
 
+### .hasNotClass(wrapper, className, [message])
+
+* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { String } className
+* *@param* { String } message
+
+Check if the current node has not a `className` prop including the passed in class name.
+
+```js
+  const wrapper = mount(<MyComponent />)
+  t.hasNotClass(wrapper.find('#child'), 'parent', 'should have not class parent')
+```
+
 ### .html(wrapper, value, [message])
 
 * *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
