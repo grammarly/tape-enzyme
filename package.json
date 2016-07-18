@@ -1,10 +1,11 @@
 {
   "name": "@grammarly-npm/tape-enzyme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "tape-enzyme micro library",
   "directories": {
     "lib": "./lib"
   },
+  "main": "./lib/index",
   "repository": {
     "type": "git",
     "url": "https://github.com/grammarly/tape-enzyme"
