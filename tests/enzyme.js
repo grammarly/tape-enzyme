@@ -1,5 +1,5 @@
 import React from 'react' // eslint-disable-line no-unused-vars
-import {Foo, firstChild, createDom} from './utils'
+import {Foo, firstChild, createDom, bar} from './utils'
 import {mount} from 'enzyme'
 import test from '../src'
 
@@ -7,7 +7,7 @@ import test from '../src'
 test('enzyme test', t => {
   createDom()
   
-  const wrapper = mount(<Foo foo={2} />)
+  const wrapper = mount(<Foo foo={2} bar={bar} />)
   const parent = wrapper.find('#parent')
   
   t.hasClass(parent, 'parent', 'should has class parent')
@@ -36,6 +36,9 @@ test('enzyme test', t => {
 
   t.state(wrapper, 'foo', 1, 'should be foo equals 1 in state')
   t.prop(wrapper, 'foo', 2, 'should be foo equals 2 in props')
+
+  t.stateDeep(wrapper, 'bar', bar, 'bar state should be equals to bar')
+  t.propDeep(wrapper, 'bar', bar, 'bar props should be equals to bar')
 
   t.type(parent, 'div', 'should has type div')
 

@@ -70,6 +70,14 @@ function state(wrapper, stateName, value, msg) {
   this.equal(wrapper.state(stateName), value, msg)
 }
 
+function propDeep(wrapper, propName, value, msg) {
+  this.deepEqual(wrapper.prop(propName), value, msg);
+}
+
+function stateDeep(wrapper, stateName, value, msg) {
+  this.deepEqual(wrapper.state(stateName), value, msg);
+}
+
 function text(wrapper, value, msg) {
   this.equal(wrapper.text(), value, msg)
 }
@@ -82,5 +90,5 @@ export default {
   hasClass, contains, containsMatchingElement, containsAllMatchingElements,
   everyComponent, everyComponentWhere, html, instanceComponent, isSelector,
   checkKey, checkName, prop, state, text, type, containsAnyMatchingElements,
-  notEveryComponent, isNotSelector, notContains, hasNotClass
+  notEveryComponent, isNotSelector, notContains, hasNotClass, propDeep, stateDeep
 }

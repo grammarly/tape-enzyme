@@ -334,3 +334,48 @@ Check `prop` of the current node.
   const wrapper = mount(<Foo />)
   t.prop(wrapper, 'foo', 1, 'state foo should be equal to 1')
 ```
+### .propDeep(wrapper, propName, value, [message])
+
+* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { String } propName
+* *@param* { } value
+* *@param* { String } message
+
+Check `prop` of the current node.
+
+```js
+  const props = {
+    foo: 1,
+    bar: 2
+  }
+  const wrapper = mount(<MyComponent foo={foo} />)
+  t.prop(wrapper, 'foo', foo, 'property foo should be equal to "props"')
+```
+
+### .state(wrapper, stateName, value, [message])
+
+* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { String } stateName
+* *@param* { } value
+* *@param* { String } message
+
+Check `prop` of the current node.
+
+```js
+  const state = {
+    foo: 1,
+    bar: 2
+  }
+  class Foo extends Component {
+    constructor() {
+      super()
+      this.state = {
+        foo: state
+      }
+    }
+  }
+    
+  const wrapper = mount(<Foo />)
+  t.prop(wrapper, 'foo', state, 'state foo should be equal to "state"')
+  
+```

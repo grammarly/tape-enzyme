@@ -4,11 +4,17 @@ import {jsdom} from 'jsdom-no-contextify'
 export const firstChild = <span id='child1' key='2' className='child foo'>First Child</span>
 export const secondChild = <span id='child2' key='3' className='child foo'>Second Child</span>
 
+export const bar = {
+  bar: 1,
+  foo: 2
+}
+
 export class Foo extends Component {
   constructor() {
     super()
     this.state = {
-      foo: 1
+      foo: 1,
+      bar
     }
   }
 
