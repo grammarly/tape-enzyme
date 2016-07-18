@@ -4,8 +4,8 @@ Use simple unit tests utils in tape:
 
 ### .isTrue(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is `true`.
 
@@ -15,8 +15,8 @@ Check that `value` is `true`.
 
 ### .isFalse(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is `false`.
 
@@ -26,9 +26,9 @@ Check that `value` is `false`.
 
 ### .typeOf(value, type, [message])
 
-* @param { Mixed } value
-* @param { String } name
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } name
+* *@param* { String } message
 
 Check that `value`’s type is `name`, as determined by `Object.prototype.toString`.
 
@@ -46,9 +46,9 @@ Check that `value`’s type is `name`, as determined by `Object.prototype.toStri
 
 ### .notTypeOf(value, type, [message])
 
-* @param { Mixed } value
-* @param { String } typeof name
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } typeof name
+* *@param* { String } message
 
 Check that `value`’s type is not `name`, as determined by `Object.prototype.toString`.
 
@@ -58,9 +58,9 @@ Check that `value`’s type is not `name`, as determined by `Object.prototype.to
 
 ### .instanceOf(value, constructor, [message])
 
-* @param { Object } object
-* @param { Constructor } constructor
-* @param { String } message
+* *@param* { Object } object
+* *@param* { Constructor } constructor
+* *@param* { String } message
 
 Check that `value` is an instance of `constructor`.
 
@@ -70,9 +70,9 @@ Check that `value` is an instance of `constructor`.
 
 ### .notInstanceOf(value, constructor, [message])
 
-* @param { Object } object
-* @param { Constructor } constructor
-* @param { String } message
+* *@param* { Object } object
+* *@param* { Constructor } constructor
+* *@param* { String } message
 
 Check that `value` is not an instance of `constructor`.
 
@@ -82,8 +82,8 @@ Check that `value` is not an instance of `constructor`.
 
 ### .isObject(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is an object of type `'Object'` (as revealed by `Object.prototype.toString`).
 
@@ -93,8 +93,8 @@ Check that `value` is an object of type `'Object'` (as revealed by `Object.proto
 
 ### .isNotObject(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not an object of type `'Object'` (as revealed by `Object.prototype.toString`).
 
@@ -104,8 +104,8 @@ Check that `value` is not an object of type `'Object'` (as revealed by `Object.p
 
 ### .isArray(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is an `array`.
 
@@ -115,8 +115,8 @@ Check that `value` is an `array`.
 
 ### .isNotArray(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not an `array`.
 
@@ -126,8 +126,8 @@ Check that `value` is not an `array`.
 
 ### .isString(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is a `string`.
 
@@ -137,8 +137,8 @@ Check that `value` is a `string`.
 
 ### .isNotString(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not a `string`.
 
@@ -148,8 +148,8 @@ Check that `value` is not a `string`.
 
 ### .isNumber(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is a `number`.
 
@@ -159,8 +159,8 @@ Check that `value` is a `number`.
 
 ### .isNotNumber(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not a `number`.
 
@@ -170,8 +170,8 @@ Check that `value` is not a `number`.
 
 ### .isBoolean(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is a `boolean`.
 
@@ -181,8 +181,8 @@ Check that `value` is a `boolean`.
 
 ### .isNotBoolean(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not a `boolean`.
 
@@ -192,8 +192,8 @@ Check that `value` is not a `boolean`.
 
 ### .isNull(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is `null`.
 
@@ -203,8 +203,8 @@ Check that `value` is `null`.
 
 ### .isNotNull(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not `null`.
 
@@ -214,8 +214,8 @@ Check that `value` is not `null`.
 
 ### .isNaN(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is `NaN`.
 
@@ -225,8 +225,8 @@ Check that `value` is `NaN`.
 
 ### .isNotNaN(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not `NaN`.
 
@@ -236,8 +236,8 @@ Check that `value` is not `NaN`.
 
 ### .isUndefined(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is `undefined`.
 
@@ -248,8 +248,8 @@ Check that `value` is `undefined`.
 
 ### .isDefined(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not `undefined`.
 
@@ -260,8 +260,8 @@ Check that `value` is not `undefined`.
 
 ### .isFunction(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is a `function`.
 
@@ -272,8 +272,8 @@ Check that `value` is a `function`.
 
 ### .isNotFunction(value, [message])
 
-* @param { Mixed } value
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { String } message
 
 Check that `value` is not a `function`.
 
@@ -284,9 +284,9 @@ Check that `value` is not a `function`.
 
 ###  .include(haystack, needle, [message])
 
-* @param { Array | String } haystack
-* @param { Mixed } needle
-* @param { String } message
+* *@param* { Array | String } haystack
+* *@param* { Mixed } needle
+* *@param* { String } message
 
 Check that `haystack` includes `needle`. Works for `strings` and `arrays`.
 
@@ -297,9 +297,9 @@ t.include([1, 2, 3], 3, 'array should include 3')
 
 ### .notInclude(haystack, needle, [message])
 
-* @param { Array | String } haystack
-* @param { Mixed } needle
-* @param { String } message
+* *@param* { Array | String } haystack
+* *@param* { Mixed } needle
+* *@param* { String } message
 
 Check that `haystack` does not include `needle`. Works for `strings` and `arrays`.
 
@@ -310,9 +310,9 @@ assert.notInclude([1, 2, 3], 4, 'array should not include contain value')
 
 ### .match(value, regexp, [message])
 
-* @param { Mixed } value
-* @param { RegExp } regexp
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { RegExp } regexp
+* *@param* { String } message
 
 Check that `value` matches the regular expression `regexp`.
 
@@ -322,9 +322,9 @@ assert.match('foobar', /^foo/, 'regexp should match')
 
 ### .notMatch(value, regexp, [message])
 
-* @param { Mixed } value
-* @param { RegExp } regexp
-* @param { String } message
+* *@param* { Mixed } value
+* *@param* { RegExp } regexp
+* *@param* { String } message
 
 Check that `value` does not match the regular expression `regexp`.
 
@@ -334,9 +334,9 @@ t.notMatch('foobar', /^foo/, 'regexp should not match')
 
 ### .property(object, property, [message])
 
-* @param { Object } object
-* @param { String } property
-* @param { String } message
+* *@param* { Object } object
+* *@param* { String } property
+* *@param* { String } message
 
 Check that `object` has a property named by `property`.
 
@@ -346,9 +346,9 @@ Check that `object` has a property named by `property`.
 
 ### .notProperty(object, property, [message])
 
-@param { Object } object
-@param { String } property
-@param { String } message
+*@param* { Object } object
+*@param* { String } property
+*@param* { String } message
 
 Check that `object` does not have a property named by `property`.
 
@@ -358,10 +358,10 @@ Check that `object` does not have a property named by `property`.
 
 ### .operator(val1, operator, val2, [message])
 
-* @param { Mixed } val1
-* @param { String } operator
-* @param { Mixed } val2
-* @param { String } message
+* *@param* { Mixed } val1
+* *@param* { String } operator
+* *@param* { Mixed } val2
+* *@param* { String } message
 
 Check two `values` using `operator`.
 
@@ -377,10 +377,10 @@ Check two `values` using `operator`.
 
 ### .closeTo(actual, expected, delta, [message])
 
-* @param { Number } actual
-* @param { Number } expected
-* @param { Number } delta
-* @param { String } message
+* *@param* { Number } actual
+* *@param* { Number } expected
+* *@param* { Number } delta
+* *@param* { String } message
 
 Check that the `target` is equal `expected`, to within a `+/-` `delta` range.
 
@@ -390,9 +390,9 @@ Check that the `target` is equal `expected`, to within a `+/-` `delta` range.
 
 ### .sameMembers(set1, set2, [message])
 
-* @param { Array } set1
-* @param { Array } set2
-* @param { String } message
+* *@param* { Array } set1
+* *@param* { Array } set2
+* *@param* { String } message
 
 Check that `set1` and `set2 `have the same `members`. Order is not taken into account.
 
@@ -402,9 +402,9 @@ Check that `set1` and `set2 `have the same `members`. Order is not taken into ac
 
 ### .includeMembers(superset, subset, [message])
 
-* @param { Array } superset
-* @param { Array } subset
-* @param { String } message
+* *@param* { Array } superset
+* *@param* { Array } subset
+* *@param* { String } message
 
 Check that `subset` is included in `superset`. Order is not taken into account.
 
@@ -414,9 +414,9 @@ Check that `subset` is included in `superset`. Order is not taken into account.
 
 ### .oneOf(inList, list, [message])
 
-* @param { } inList
-* @param { Array.<*> } list
-* @param { String } message
+* *@param* { } inList
+* *@param* { Array.<*> } list
+* *@param* { String } message
 
 Check that non-object, non-array value `inList` appears in the flat array `list`.
 
