@@ -169,9 +169,17 @@ function oneOf(inList, list, msg) {
   this.include(list, inList, msg)
 }
 
+function property(object, property, msg) {
+  this.isDefined(object[property], msg)
+}
+
+function notProperty(object, property, msg) {
+  this.isUndefined(object[property], msg)
+}
+
 export default {
   isTrue, isFalse, typeOf, notTypeOf, instanceOf, notInstanceOf, isObject, isNotObject, isArray, isNotArray,
   isString, isNotString, isNumber, isNotNumber, isBoolean, isNotBoolean, isNull, isNotNull, isUndefined, 
   isDefined, isFunction, isNotFunction, include, notInclude, lengthOf, match, notMatch, isNaN: checkNaN, 
-  isNotNaN, operator, closeTo, sameMembers, includeMembers, oneOf
+  isNotNaN, operator, closeTo, sameMembers, includeMembers, oneOf, property, notProperty
 }

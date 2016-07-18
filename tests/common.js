@@ -63,6 +63,9 @@ test('common test', t => {
 
   t.match(string, regexp, 'should regexp matches')
   t.notMatch('bar', regexp, 'should regexp matches')
+  
+  t.property(object, 'a', 'should have property a')
+  t.notProperty(object, 'd', 'should have property a')
 
   t.operator(1, '<', 2, 'should be 1 < 2')
   t.operator(3, '>', 2, 'should be 3 > 2')

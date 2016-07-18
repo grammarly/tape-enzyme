@@ -1,3 +1,4 @@
+import React from 'react' // eslint-disable-line no-unused-vars
 import {Foo, createDom} from './utils' // eslint-disable-line no-unused-vars
 import {mount} from 'enzyme'
 import test from '../src'
