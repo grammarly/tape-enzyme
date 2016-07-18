@@ -2,16 +2,20 @@ function hasClass(wrapper, className, msg) {
   this.isTrue(wrapper.hasClass(className), msg)
 }
 
-function contains(wrapper, component, msg) {
-  this.isTrue(wrapper.contains(component), msg)
+function contains(wrapper, node, msg) {
+  this.isTrue(wrapper.contains(node), msg)
 }
 
-function containsMatchingElement(wrapper, component, msg) {
-  this.isTrue(wrapper.containsMatchingElement(component), msg)
+function containsMatchingElement(wrapper, node, msg) {
+  this.isTrue(wrapper.containsMatchingElement(node), msg)
 }
 
-function containsAllMatchingElements(wrapper, component, msg) {
-  this.isTrue(wrapper.containsAllMatchingElements(component), msg)
+function containsAllMatchingElements(wrapper, nodes, msg) {
+  this.isTrue(wrapper.containsAllMatchingElements(nodes), msg)
+}
+
+function containsAnyMatchingElements(wrapper, nodes, msg) {
+  this.isTrue(wrapper.containsAnyMatchingElements(nodes), msg)
 }
 
 function everyComponent(wrapper, selector, msg) {
@@ -61,5 +65,5 @@ function type(wrapper, value, msg) {
 export default {
   hasClass, contains, containsMatchingElement, containsAllMatchingElements,
   everyComponent, everyComponentWhere, html, instanceComponent, isSelector,
-  checkKey, checkName, prop, state, text, type
+  checkKey, checkName, prop, state, text, type, containsAnyMatchingElements
 }

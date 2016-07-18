@@ -18,9 +18,9 @@ import test from '@grammarly-npm/tape-enzyme'
 
 Use three types of usage:
 
-* [Simple]
-* [Enzyme]
-* [Wrapper]
+* [Simple](https://github.com/grammarly/tape-enzyme/blob/master/doc/simple.md)
+* [Enzyme](https://github.com/grammarly/tape-enzyme/blob/master/doc/enzyme.md)
+* [Wrapper](https://github.com/grammarly/tape-enzyme/blob/master/doc/wrapper.md)
 
 ## Test
 

@@ -1,5 +1,7 @@
 # Simple Api
 
+Use simple unit tests utils in tape:
+
 ### .isTrue(value, [message])
 
 * @param { Mixed } value

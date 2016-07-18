@@ -12,12 +12,12 @@ test('enzyme test', t => {
   
   t.hasClass(parent, 'parent', 'should has class parent')
   t.lengthOf(parent.find('.child'), 2, 'should has tow elements with class child')
-  t.contains(wrapper, firstChild, 'should contains component')
-  t.containsMatchingElement(wrapper, <span>First Child</span>, 'should match component')
+  t.contains(wrapper, firstChild, 'should contains node')
+  t.containsMatchingElement(wrapper, <span>First Child</span>, 'should match node')
   t.containsAllMatchingElements(
     wrapper,
     [<span>First Child</span>, <span>Second Child</span>],
-    'should match component'
+    'should match nodes'
   )
   t.everyComponent(parent, '.foo', 'every element should has class child')
   t.everyComponentWhere(parent, n => n.hasClass('foo'), 'every element should has class child')
