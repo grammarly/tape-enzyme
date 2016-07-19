@@ -1,6 +1,6 @@
 {
   "name": "@grammarly-npm/tape-enzyme",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "tape-enzyme micro library",
   "directories": {
     "lib": "./lib"

@@ -155,7 +155,7 @@ Check if every `node` in the current wrapper passed the predicate `function`.
 
 ### .hasClass(wrapper, className, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } className
 * *@param* { String } message
 
@@ -170,7 +170,7 @@ Check if the current node has a `className` prop including the passed in class n
 
 ### .hasNotClass(wrapper, className, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } className
 * *@param* { String } message
 
@@ -183,7 +183,7 @@ Check if the current node has not a `className` prop including the passed in cla
 
 ### .html(wrapper, value, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } value
 * *@param* { String } message
 
@@ -197,7 +197,7 @@ Check the resulting HTML `string`.
 
 ### .instanceComponent(wrapper, constructor, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { ReactComponent } constructor
 * *@param* { String } message
 
@@ -210,7 +210,7 @@ Check that `node` is an instance of `constructor`.
 
 ### .isSelector(wrapper, selector, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } selector
 * *@param* { String } message
 
@@ -223,7 +223,7 @@ Check the current `node` matches a provided `selector`.
 
 ### .isNotSelector(wrapper, selector, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } selector
 * *@param* { String } message
 
@@ -237,7 +237,7 @@ Check if the current `node` doesn't match a provided `selector`.
 
 ### .checkKey(wrapper, key, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } key
 * *@param* { String } message
 
@@ -256,7 +256,7 @@ Check `key` of the current node.
 
 ### .checkName(wrapper, name, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } name
 * *@param* { String } message
 
@@ -269,7 +269,7 @@ Check `name` of the current node.
 
 ### .text(wrapper, value, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } value
 * *@param* { String } message
 
@@ -282,7 +282,7 @@ Check the resulting of text content of the `node`.
 
 ### .type(wrapper, type, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } name
 * *@param* { String } message
 
@@ -300,7 +300,7 @@ Check `type` of the current node.
 
 ### .prop(wrapper, propName, value, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } propName
 * *@param* { } value
 * *@param* { String } message
@@ -314,7 +314,7 @@ Check `prop` of the current node.
 
 ### .state(wrapper, stateName, value, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } stateName
 * *@param* { } value
 * *@param* { String } message
@@ -336,7 +336,7 @@ Check `prop` of the current node.
 ```
 ### .propDeep(wrapper, propName, value, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } propName
 * *@param* { } value
 * *@param* { String } message
@@ -354,7 +354,7 @@ Check `prop` of the current node.
 
 ### .state(wrapper, stateName, value, [message])
 
-* *@param* { Object<EnzymeMount> } Enzyme Mount ReactElement
+* *@param* { Object<EnzymeMount> } wrapper
 * *@param* { String } stateName
 * *@param* { } value
 * *@param* { String } message

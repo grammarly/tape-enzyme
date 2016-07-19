@@ -26,12 +26,32 @@ import {registration} from '@grammarly-npm/tape-enzyme'
 export default registration(test)
 ```
 
-Use three types of usage:
+Use three types of testing utils:
 
 * [Simple](https://github.com/grammarly/tape-enzyme/blob/master/doc/simple.md)
 * [Enzyme](https://github.com/grammarly/tape-enzyme/blob/master/doc/enzyme.md)
 * [Wrapper](https://github.com/grammarly/tape-enzyme/blob/master/doc/wrapper.md)
 
+You can add your own methods using `init`:
+
+### .init(methodName, func)
+
+* *@param* { String } methodName
+* *@param* { Function } func
+
+Example:
+
+```js
+test.init('notStrictEqual', function (actual, expected, msg) {
+  this.operator(actual, '!==', expected, msg)
+})
+
+test('notStrictEqual test', t => {
+  t.notStrictEqual(3, '3', 'should be not strict equality')
+  t.end()
+})
+
+```
 
 ## Test
 
