@@ -12,8 +12,18 @@
 Tape-Enzyme is a proxy of [tape](https://github.com/substack/tape), but it has better functionality.
 
 Import library and use as `tape` test:
+
 ```js
 import test from '@grammarly-npm/tape-enzyme'
+```
+
+Also you can add plugin to your current `tape` instance:
+
+```js
+import test from 'tape'
+import {registration} from '@grammarly-npm/tape-enzyme'
+
+export default registration(test)
 ```
 
 Use three types of usage:
@@ -21,6 +31,7 @@ Use three types of usage:
 * [Simple](https://github.com/grammarly/tape-enzyme/blob/master/doc/simple.md)
 * [Enzyme](https://github.com/grammarly/tape-enzyme/blob/master/doc/enzyme.md)
 * [Wrapper](https://github.com/grammarly/tape-enzyme/blob/master/doc/wrapper.md)
+
 
 ## Test
 

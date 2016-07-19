@@ -1,6 +1,6 @@
 import test from '../src'
 
-test('common test', t => {
+test('simple test', t => {
   const number = 1
   const array = [1, 2, 3]
   const object = {a: 1, b: 2, c: 3}
