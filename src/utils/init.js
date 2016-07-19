@@ -1,1 +1,1 @@
-export default tape => (method, func) => tape.Test.prototype.wrapper[method] = func
+export default tape => (method, func) => tape.Test.prototype[method] = func

@@ -6,10 +6,11 @@ import wrapper from './utils/wrapper'
 
 
 export function registration(tape) {
-  [enzymeUtils, simpleUtils].forEach(utils =>
-    Object.keys(utils).forEach(key => tape.Test.prototype[key] = utils[key]))
-  tape.Test.prototype.wrapper = wrapper
+  const utils = [enzymeUtils, simpleUtils]
   tape.init = init(tape)
+  tape.init('wrapper', wrapper)
+  utils.forEach(util =>
+    Object.keys(util).forEach(key => tape.init(key, util[key])))
   return tape
 }
 
