@@ -36,6 +36,7 @@ test('enzyme test', t => {
 
   t.state(wrapper, 'foo', 1, 'should be foo equals 1 in state')
   t.prop(wrapper, 'foo', 2, 'should be foo equals 2 in props')
+  t.propType(wrapper, 'foo', 'number', 'type of foo should be equal to number')
 
   t.stateDeep(wrapper, 'bar', bar, 'bar state should be equals to bar')
   t.propDeep(wrapper, 'bar', bar, 'bar props should be equals to bar')
