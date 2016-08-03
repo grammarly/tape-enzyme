@@ -24,6 +24,14 @@ function notInstanceOf(value, constructor, msg) {
   this.isFalse(value instanceof constructor, msg)
 }
 
+function isEmpty(value, msg) {
+  this.isTrue(Object.keys(value).length === 0, msg)
+}
+
+function isNotEmpty(value, msg) {
+  this.isTrue(Object.keys(value).length > 0, msg)
+}
+
 function isObject(value, msg) {
   this.typeOf(value, 'object', msg)
 }
@@ -178,8 +186,8 @@ function notProperty(object, property, msg) {
 }
 
 export default {
-  isTrue, isFalse, typeOf, notTypeOf, instanceOf, notInstanceOf, isObject, isNotObject, isArray, isNotArray,
-  isString, isNotString, isNumber, isNotNumber, isBoolean, isNotBoolean, isNull, isNotNull, isUndefined, 
-  isDefined, isFunction, isNotFunction, include, notInclude, lengthOf, match, notMatch, isNaN: checkNaN, 
-  isNotNaN, operator, closeTo, sameMembers, includeMembers, oneOf, property, notProperty
+  isTrue, isFalse, typeOf, notTypeOf, instanceOf, notInstanceOf, isObject, isNotObject, isEmpty, isNotEmpty,
+  isArray, isNotArray, isString, isNotString, isNumber, isNotNumber, isBoolean, isNotBoolean, isNull, isNotNull,
+  isUndefined, isDefined, isFunction, isNotFunction, include, notInclude, lengthOf, match, notMatch,
+  isNaN: checkNaN, isNotNaN, operator, closeTo, sameMembers, includeMembers, oneOf, property, notProperty
 }

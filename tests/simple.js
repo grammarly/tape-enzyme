@@ -30,7 +30,12 @@ test('simple test', t => {
 
   t.isObject(object, 'should be object')
   t.isNotObject(string, 'should not be object')
-  
+
+  t.isEmpty({}, 'object should be empty')
+  t.isEmpty([], 'array should be empty')
+  t.isNotEmpty(object, 'object should not be empty')
+  t.isNotEmpty(array, 'array should not be empty')
+
   t.isArray(array, 'should be array')
   t.isNotArray(string, 'should not be array')
 
