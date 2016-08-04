@@ -25,6 +25,9 @@ test('simple test', t => {
   
   t.notTypeOf('tea', 'number', 'string should not be number')
 
+  t.isMore(2, 1, '2 should be greater then 1')
+  t.isLess(1, 2, '1 should be less then 2')
+
   t.instanceOf(date, Date, 'should be instance of Date')
   t.notInstanceOf(date, String, 'should not be an instance of String')
 
