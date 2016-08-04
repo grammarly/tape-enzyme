@@ -36,8 +36,10 @@ test('simple test', t => {
 
   t.isEmpty({}, 'object should be empty')
   t.isEmpty([], 'array should be empty')
+  t.isEmpty('', 'string should be empty')
   t.isNotEmpty(object, 'object should not be empty')
   t.isNotEmpty(array, 'array should not be empty')
+  t.isNotEmpty('foo', 'string should not be empty')
 
   t.isArray(array, 'should be array')
   t.isNotArray(string, 'should not be array')

@@ -56,9 +56,33 @@ Check that `value`’s type is not `name`, as determined by `Object.prototype.to
   t.notTypeOf('tea', 'number', 'string should not be number')
 ```
 
+### .isLess(val1, val2, [message])
+
+* *@param* { Number } val1
+* *@param* { Number } val2
+* *@param* { String } message
+
+Check that `val1` is less then `val2`.
+
+```js
+  t.isLess(1, 2, '1 should be less then 2')
+```
+
+### .isMore(val1, val2, [message])
+
+* *@param* { Number } val1
+* *@param* { Number } val2
+* *@param* { String } message
+
+Check that `val1` is greater then `val2`.
+
+```js
+  t.isMore(2, 1, '2 should be greater then 1')
+```
+
 ### .instanceOf(value, constructor, [message])
 
-* *@param* { Object } object
+* *@param* { Object } value
 * *@param* { Constructor } constructor
 * *@param* { String } message
 
@@ -70,7 +94,7 @@ Check that `value` is an instance of `constructor`.
 
 ### .notInstanceOf(value, constructor, [message])
 
-* *@param* { Object } object
+* *@param* { Object } value
 * *@param* { Constructor } constructor
 * *@param* { String } message
 
@@ -78,6 +102,32 @@ Check that `value` is not an instance of `constructor`.
 
 ```js
   t.notInstanceOf(new Date(), String, 'should not be an instance of String')
+```
+
+### .isEmpty(value, [message])
+
+* *@param* { Object } value
+* *@param* { String } message
+
+Check that `value` is empty object.
+
+```js
+  t.isEmpty({}, 'object should be empty')
+  t.isEmpty([], 'array should be empty')
+  t.isEmpty('', 'string should be empty')
+```
+
+### .isNotEmpty(value, [message])
+
+* *@param* { Object } value
+* *@param* { String } message
+
+Check that `value` is not empty object.
+
+```js
+  t.isNotEmpty(object, 'object should not be empty')
+  t.isNotEmpty(array, 'array should not be empty')
+  t.isNotEmpty('foo', 'string should not be empty')
 ```
 
 ### .isObject(value, [message])
