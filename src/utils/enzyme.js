@@ -7,11 +7,11 @@ function hasNotClass(wrapper, className, msg) {
 }
 
 function isFound(wrapper, selector, msg) {
-  this.isTrue(wrapper.find(selector).length > 0, msg)
+  this.isMore(wrapper.find(selector).length, 0, msg)
 }
 
 function isNotFound(wrapper, selector, msg) {
-  this.isTrue(wrapper.find(selector).length === 0, msg)
+  this.lengthOf(wrapper.find(selector), 0, msg)
 }
 
 function contains(wrapper, node, msg) {

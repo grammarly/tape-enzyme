@@ -16,12 +16,28 @@ function notTypeOf(value, type, msg) {
   this.notEqual(typeDetect(value), type, msg)
 }
 
+function isLess(val1, val2, msg) {
+  this.isTrue(val1 < val2, msg)
+}
+
+function isMore(val1, val2, msg) {
+  this.isTrue(val1 > val2, msg)
+}
+
 function instanceOf(value, constructor, msg) {
   this.isTrue(value instanceof constructor, msg)
 }
 
 function notInstanceOf(value, constructor, msg) {
   this.isFalse(value instanceof constructor, msg)
+}
+
+function isEmpty(value, msg) {
+  this.equal(Object.keys(value).length, 0, msg)
+}
+
+function isNotEmpty(value, msg) {
+  this.isMore(Object.keys(value).length, 0, msg)
 }
 
 function isObject(value, msg) {
@@ -120,16 +136,16 @@ function notMatch(value, regexp, msg) {
 function operator(val1, operator, val2, msg) {
   switch (operator) {
     case '<':
-      this.isTrue(val1 < val2, msg)
+      this.isLess(val1, val2, msg)
       break
     case '<=':
-      this.isTrue(val1 <= val2, msg)
+      this.isLess(val1, val2 + 1, msg)
       break
     case '>':
-      this.isTrue(val1 > val2, msg)
+      this.isMore(val1, val2, msg)
       break
     case '>=':
-      this.isTrue(val1 >= val2, msg)
+      this.isMore(val1, val2 - 1, msg)
       break
     case '==':
       this.isTrue(val1 == val2, msg)
@@ -178,8 +194,9 @@ function notProperty(object, property, msg) {
 }
 
 export default {
-  isTrue, isFalse, typeOf, notTypeOf, instanceOf, notInstanceOf, isObject, isNotObject, isArray, isNotArray,
-  isString, isNotString, isNumber, isNotNumber, isBoolean, isNotBoolean, isNull, isNotNull, isUndefined, 
-  isDefined, isFunction, isNotFunction, include, notInclude, lengthOf, match, notMatch, isNaN: checkNaN, 
-  isNotNaN, operator, closeTo, sameMembers, includeMembers, oneOf, property, notProperty
+  isTrue, isFalse, typeOf, notTypeOf, isLess, isMore, instanceOf, notInstanceOf, isObject, isNotObject,
+  isEmpty, isNotEmpty, isArray, isNotArray, isString, isNotString, isNumber, isNotNumber, isBoolean,
+  isNotBoolean, isNull, isNotNull, isUndefined, isDefined, isFunction, isNotFunction, include,
+  notInclude, lengthOf, match, notMatch, isNaN: checkNaN, isNotNaN, operator, closeTo,
+  sameMembers, includeMembers, oneOf, property, notProperty
 }

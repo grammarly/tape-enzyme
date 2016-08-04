@@ -2,6 +2,44 @@
 
 Use advance enzyme utils in:
 
+### .isFound(wrapper, selector, [message])
+
+* *@param* { Object<EnzymeMount> } wrapper
+* *@param* { [EnzymeSelector](https://github.com/airbnb/enzyme/blob/master/docs/api/selector.md) } selector 
+* *@param* { String } message
+
+Check if the current `wrapper` has an `element` that matches given selector anywhere in it's render tree.
+
+```js
+  const wrapper = mount(
+    <div>
+      <span className='foo'>Hello</span>
+      <span className='bar'>World</span>
+    </div>
+  )
+
+  t.isFound(wrapper, '.foo', 'should find element that has "foo" class')
+```
+
+### .isNotFound(wrapper, selector, [message])
+
+* *@param* { Object<EnzymeMount> } wrapper
+* *@param* { [EnzymeSelector](https://github.com/airbnb/enzyme/blob/master/docs/api/selector.md) } selector 
+* *@param* { String } message
+
+Check if the current `wrapper` hasn't an `element` that matches given selector anywhere in it's render tree.
+
+```js
+  const wrapper = mount(
+    <div>
+      <span className='foo'>Hello</span>
+      <span className='bar'>World</span>
+    </div>
+  )
+
+  t.isFound(wrapper, '[data-baz=baz]', 'should not find element with attribute "data-baz=baz"')
+```
+
 ### .contains(wrapper, nodeOrNodes, [message])
 
 * *@param* { Object<EnzymeMount> } wrapper
