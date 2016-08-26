@@ -24,8 +24,9 @@
   "license": "MIT",
   "homepage": "https://github.com/grammarly/tape-enzyme",
   "scripts": {
-    "tests": "./node_modules/.bin/babel-tape-runner tests/**/*.js",
-    "eslint": "./node_modules/.bin/eslint . --max-warnings 0",
+    "test:unit": "./node_modules/.bin/babel-tape-runner tests/**/*.js",
+    "test:lint": "./node_modules/.bin/eslint . --max-warnings 0",
+    "test": "npm run test:lint && npm run test:unit",
     "build": "./node_modules/.bin/gulp build"
   },
   "devDependencies": {

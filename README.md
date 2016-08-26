@@ -1,7 +1,6 @@
 # Tape-Enzyme
 
 * Tape-Enzyme micro library - help Grammarly front-end services to use tape with enzyme.
-* Responsibility: Acquisition Team
 
 ## Installation
 
@@ -53,12 +52,50 @@ test('notStrictEqual test', t => {
 
 ```
 
-## Test
+## Development
 
-- `npm run tests`
+#### Prerequisites
 
-# Publish
+* You have `node` installed at v4.0.0+ and `npm` at v2.0.0+.
+* You are familiar with `git`.
 
-- Check if you update version and run `gulp build`. (if you have something new commit changes)
-- `npm publish`
-- Switch version to new one in your project
+#### Setup
+
+```shell
+$ git clone <this repo>
+$ cd tape-enzyme
+$ npm install
+```
+
+#### Tests
+
+Linters:
+
+```shell
+$ npm run test:lint
+```
+
+Unit tests:
+
+```shell
+$ npm run test:unit
+```
+
+All tests:
+
+```shell
+$ npm test
+```
+
+
+## Contributing
+
+The main purpose of this library is to make writing tests with `tape` easier: 
+less code, more expressive and as robust as possible. If you think that we are missing 
+the key features, please open a GitHub issue or even better - a pull request. 
+Any feedback you have about using `tape-enzyme` would be greatly appreciated.
+
+## License
+
+Tape-enzyme is [Apache 2.0 licensed](./LICENSE.md).
+
