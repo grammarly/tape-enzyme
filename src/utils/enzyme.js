@@ -71,11 +71,11 @@ function state(wrapper, stateName, value, msg) {
 }
 
 function propDeep(wrapper, propName, value, msg) {
-  this.deepEqual(wrapper.prop(propName), value, msg);
+  this.deepEqual(wrapper.prop(propName), value, msg)
 }
 
 function stateDeep(wrapper, stateName, value, msg) {
-  this.deepEqual(wrapper.state(stateName), value, msg);
+  this.deepEqual(wrapper.state(stateName), value, msg)
 }
 
 function text(wrapper, value, msg) {

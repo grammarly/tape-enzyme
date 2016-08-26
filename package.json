@@ -10,6 +10,9 @@
     "type": "git",
     "url": "https://github.com/grammarly/tape-enzyme"
   },
+  "bugs": {
+    "url": "https://github.com/grammarly/tape-enzyme/issues"
+  },
   "keywords": [
     "tape",
     "react",
@@ -21,7 +24,7 @@
     "email": "engineering@grammarly.com",
     "url": "https://github.com/grammarly"
   },
-  "license": "MIT",
+  "license": "Apache 2.0",
   "homepage": "https://github.com/grammarly/tape-enzyme",
   "scripts": {
     "tests": "./node_modules/.bin/babel-tape-runner tests/**/*.js",
