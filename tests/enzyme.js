@@ -12,6 +12,8 @@ test('enzyme test', t => {
   
   t.hasClass(parent, 'parent', 'should has class parent')
   t.hasNotClass(parent, 'child', 'should has not class child')
+  t.isFound(parent, '.child', 'should has nodes with child class')
+  t.isNotFound(parent, '.notExistingClass', 'should hasn\'t nodes with not existing class')
   t.lengthOf(parent.find('.child'), 2, 'should has tow elements with class child')
   t.contains(wrapper, firstChild, 'should contains node')
   t.containsMatchingElement(wrapper, <span>First Child</span>, 'should match node')

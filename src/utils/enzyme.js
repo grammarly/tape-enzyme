@@ -6,6 +6,14 @@ function hasNotClass(wrapper, className, msg) {
   this.isFalse(wrapper.hasClass(className), msg)
 }
 
+function isFound(wrapper, selector, msg) {
+  this.isMore(wrapper.find(selector).length, 0, msg)
+}
+
+function isNotFound(wrapper, selector, msg) {
+  this.lengthOf(wrapper.find(selector), 0, msg)
+}
+
 function contains(wrapper, node, msg) {
   this.isTrue(wrapper.contains(node), msg)
 }
@@ -90,5 +98,6 @@ export default {
   hasClass, contains, containsMatchingElement, containsAllMatchingElements,
   everyComponent, everyComponentWhere, html, instanceComponent, isSelector,
   checkKey, checkName, prop, state, text, type, containsAnyMatchingElements,
-  notEveryComponent, isNotSelector, notContains, hasNotClass, propDeep, stateDeep
+  notEveryComponent, isNotSelector, notContains, hasNotClass, propDeep, stateDeep,
+  isFound, isNotFound
 }
