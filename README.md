@@ -1,6 +1,6 @@
 # Tape-Enzyme
 
-* Tape-Enzyme micro library - help Grammarly front-end services to use tape with enzyme.
+Tape-Enzyme is micro library, which help to use [Tape](https://github.com/substack/tape) with [Enzyme](https://github.com/airbnb/enzyme).
 
 ## Installation
 
