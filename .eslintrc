@@ -1,0 +1,67 @@
+// Sublime config instructions:
+//
+// * start from https://medium.com/@dan_abramov/lint-like-it-s-2015-6987d44c5b48
+// * then see https://github.com/yannickcr/eslint-plugin-react
+//
+// Known to work well with following versions:
+//
+// * babel-eslint@6.0.4
+// * eslint@2.10.2
+//
+// You may need `/* eslint no-var: 0 */` comment for es5 files
+//
+{
+  "extends": [
+    "eslint:recommended"
+  ],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  },
+  "globals": {
+    "Promise": false,
+  },
+  "rules": {
+    // possible errors
+
+    // best practices
+    "eqeqeq": 0,
+    "no-eval": 0,
+    "no-self-compare": 2,
+    "no-unused-expressions": 0, // to allow f && f() constructions
+    "wrap-iife": 2,
+    "yoda": [2, "never"],
+
+    // strict mode
+    "strict": [2, "never"],
+
+    // variables
+    "no-shadow": 0, // to allow shadowing of commonly used vars, e.g. err, cb, etc.
+    "no-undef-init": 2,
+    "no-unused-vars": [2, {"vars": "all", "args": "none"}], // args can be provided for information reasons
+
+    // node.js
+
+    // stylistic
+    "brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+    "comma-style": [2, "last"],
+    "eol-last": 2,
+    "indent": [2, 2, {"SwitchCase": 1}],
+    "jsx-quotes": [2, "prefer-single"],
+    "keyword-spacing": 2,
+    "new-cap": [2, {newIsCap: true, capIsNew: false}],
+    "no-lonely-if": 2,
+    "quotes": [2, "single", "avoid-escape"],
+    "semi": [2, "never"],
+    "space-before-blocks": [2, "always"],
+
+    // es6
+    "no-var": 2
+  }
+}

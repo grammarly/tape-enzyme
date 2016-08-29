@@ -1,0 +1,12 @@
+*.log
+*.swp
+.DS_Store
+.idea
+.npmrc
+/aws_keys.*
+/babel.json
+/bower_components
+/dist
+/node_modules
+/npm-debug.log
+/synclibs
