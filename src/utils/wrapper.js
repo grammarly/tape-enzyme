@@ -18,11 +18,17 @@ import utils from './enzyme'
 
 export default function wrapper(component) {
   const threeArgv = [...Object.keys(utils), 'lengthOf'].reduce((memo, method) => {
-    memo[method] = (value, msg) => this[method](component, value, msg)
+    memo[method] = (value, msg) => {
+      this[method](component, value, msg)
+      return wrapper.apply(this, [component])
+    }
     return memo
   }, {})
   const fourArgv = ['prop', 'state', 'stateDeep', 'propDeep'].reduce((memo, method) => {
-    memo[method] = (name, value, msg) => this[method](component, name, value, msg)
+    memo[method] = (name, value, msg) => {
+      this[method](component, name, value, msg)
+      return wrapper.apply(this, [component])
+    }
     return memo
   }, {})
   const findMethods = [
