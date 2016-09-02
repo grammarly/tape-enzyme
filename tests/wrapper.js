@@ -25,12 +25,12 @@ test('wrapper test', t => {
   const childWrapper = t.wrapper(mount(<Foo />).find('#child1'))
   const childrenWrapper = t.wrapper(mount(<Foo />).find('.child'))
 
-  childWrapper.isSelector('.child', 'child should has class .child')
-  childWrapper.hasClass('child', 'child should has class .child')
-  childWrapper.type('span', 'child should has type span')
-  childWrapper.checkName('span', 'child should has name span')
-  childWrapper.checkKey('2', 'child should has key 2')
-  childWrapper.text('First Child', 'child should has text First Child')
+  childWrapper.isSelector('.child', 'child should have class .child')
+  childWrapper.hasClass('child', 'child should have class .child')
+  childWrapper.type('span', 'child should have type span')
+  childWrapper.checkName('span', 'child should have name span')
+  childWrapper.checkKey('2', 'child should have key 2')
+  childWrapper.text('First Child', 'child should have text First Child')
 
   childrenWrapper.lengthOf(2, 'should be 2 children elements')
 
@@ -41,12 +41,12 @@ test('wrapper test - `find`', t => {
   const wrapper = t.wrapper(mount(<Foo />))
   const childWrapper = wrapper.find('#child1')
 
-  childWrapper.isSelector('.child', 'child should has class .child')
-  childWrapper.hasClass('child', 'child should has class .child')
-  childWrapper.type('span', 'child should has type span')
-  childWrapper.checkName('span', 'child should has name span')
-  childWrapper.checkKey('2', 'child should has key 2')
-  childWrapper.text('First Child', 'child should has text First Child')
+  childWrapper.isSelector('.child', 'child should have class .child')
+  childWrapper.hasClass('child', 'child should have class .child')
+  childWrapper.type('span', 'child should have type span')
+  childWrapper.checkName('span', 'child should have name span')
+  childWrapper.checkKey('2', 'child should have key 2')
+  childWrapper.text('First Child', 'child should have text First Child')
 
   t.end()
 })
@@ -54,12 +54,12 @@ test('wrapper test - `find`', t => {
 test('wrapper test - `at`', t => {
   const wrapper = t.wrapper(mount(<Foo />)).find('.child').at(0)
 
-  wrapper.isSelector('.child', 'child should has class .child')
-  wrapper.hasClass('child', 'child should has class .child')
-  wrapper.type('span', 'child should has type span')
-  wrapper.checkName('span', 'child should has name span')
-  wrapper.checkKey('2', 'child should has key 2')
-  wrapper.text('First Child', 'child should has text First Child')
+  wrapper.isSelector('.child', 'child should have class .child')
+  wrapper.hasClass('child', 'child should have class .child')
+  wrapper.type('span', 'child should have type span')
+  wrapper.checkName('span', 'child should have name span')
+  wrapper.checkKey('2', 'child should have key 2')
+  wrapper.text('First Child', 'child should have text First Child')
 
   t.end()
 })
@@ -67,12 +67,12 @@ test('wrapper test - `at`', t => {
 test('wrapper test - `childAt`', t => {
   const wrapper = t.wrapper(mount(<Foo />)).childAt(0)
 
-  wrapper.isSelector('.child', 'child should has class .child')
-  wrapper.hasClass('child', 'child should has class .child')
-  wrapper.type('span', 'child should has type span')
-  wrapper.checkName('span', 'child should has name span')
-  wrapper.checkKey('2', 'child should has key 2')
-  wrapper.text('First Child', 'child should has text First Child')
+  wrapper.isSelector('.child', 'child should have class .child')
+  wrapper.hasClass('child', 'child should have class .child')
+  wrapper.type('span', 'child should have type span')
+  wrapper.checkName('span', 'child should have name span')
+  wrapper.checkKey('2', 'child should have key 2')
+  wrapper.text('First Child', 'child should have text First Child')
 
   t.end()
 })
@@ -80,12 +80,12 @@ test('wrapper test - `childAt`', t => {
 test('wrapper test - `first`', t => {
   const wrapper = t.wrapper(mount(<Foo />)).find('.child').first()
 
-  wrapper.isSelector('.child', 'child should has class .child')
-  wrapper.hasClass('child', 'child should has class .child')
-  wrapper.type('span', 'child should has type span')
-  wrapper.checkName('span', 'child should has name span')
-  wrapper.checkKey('2', 'child should has key 2')
-  wrapper.text('First Child', 'child should has text First Child')
+  wrapper.isSelector('.child', 'child should have class .child')
+  wrapper.hasClass('child', 'child should have class .child')
+  wrapper.type('span', 'child should have type span')
+  wrapper.checkName('span', 'child should have name span')
+  wrapper.checkKey('2', 'child should have key 2')
+  wrapper.text('First Child', 'child should have text First Child')
 
   t.end()
 })
@@ -93,12 +93,12 @@ test('wrapper test - `first`', t => {
 test('wrapper test - `last`', t => {
   const wrapper = t.wrapper(mount(<Foo />)).find('.child').last()
 
-  wrapper.isSelector('.child', 'child should has class .child')
-  wrapper.hasClass('child', 'child should has class .child')
-  wrapper.type('span', 'child should has type span')
-  wrapper.checkName('span', 'child should has name span')
-  wrapper.checkKey('3', 'child should has key 3')
-  wrapper.text('Second Child', 'child should has text Second Child')
+  wrapper.isSelector('.child', 'child should have class .child')
+  wrapper.hasClass('child', 'child should have class .child')
+  wrapper.type('span', 'child should have type span')
+  wrapper.checkName('span', 'child should have name span')
+  wrapper.checkKey('3', 'child should have key 3')
+  wrapper.text('Second Child', 'child should have text Second Child')
 
   t.end()
 })
@@ -106,12 +106,12 @@ test('wrapper test - `last`', t => {
 test('wrapper test - `closest`', t => {
   const wrapper = t.wrapper(mount(<Foo />)).find('.child').last().closest('#child2')
 
-  wrapper.isSelector('.child', 'child should has class .child')
-  wrapper.hasClass('child', 'child should has class .child')
-  wrapper.type('span', 'child should has type span')
-  wrapper.checkName('span', 'child should has name span')
-  wrapper.checkKey('3', 'child should has key 3')
-  wrapper.text('Second Child', 'child should has text Second Child')
+  wrapper.isSelector('.child', 'child should have class .child')
+  wrapper.hasClass('child', 'child should have class .child')
+  wrapper.type('span', 'child should have type span')
+  wrapper.checkName('span', 'child should have name span')
+  wrapper.checkKey('3', 'child should have key 3')
+  wrapper.text('Second Child', 'child should have text Second Child')
 
   t.end()
 })
@@ -119,8 +119,8 @@ test('wrapper test - `closest`', t => {
 test('wrapper test - `parent`', t => {
   const wrapper = t.wrapper(mount(<Foo />)).find('.child').parent()
 
-  wrapper.checkName('Foo', 'child should has name div')
-  wrapper.text('First ChildSecond Child', 'child should has text First ChildSecond Child')
+  wrapper.checkName('Foo', 'child should have name div')
+  wrapper.text('First ChildSecond Child', 'child should have text First ChildSecond Child')
 
   t.end()
 })
@@ -128,6 +128,20 @@ test('wrapper test - `parent`', t => {
 test('wrapper test - `getWrapper`', t => {
   const wrapper = t.wrapper(mount(<Foo />)).find('.child').first()
 
-  t.text(wrapper.getWrapper(), 'First Child', 'child should has text First Child')
+  t.text(wrapper.getWrapper(), 'First Child', 'child should have text First Child')
   t.end()
 })
+test('wrapper test - `chain`', t => {
+  const wrapper = t.wrapper(mount(<Foo />).find('#child1'))
+
+  wrapper
+    .isSelector('.child', 'child should have class .child')
+    .hasClass('child', 'child should have class .child')
+    .type('span', 'child should have type span')
+    .checkName('span', 'child should have name span')
+    .checkKey('2', 'child should have key 2')
+    .text('First Child', 'child should have text First Child')
+
+  t.end()
+})
+

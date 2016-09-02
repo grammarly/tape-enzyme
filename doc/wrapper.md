@@ -50,12 +50,13 @@ Example:
   const childTestWrapper = testWrapper.find('#child1')
   const childrenTestWrapper = t.wrapper(wrapper.find('.child'))
 
-  childTestWrapper.isSelector('.child', 'child should has class .child')
-  childTestWrapper.hasClass('child', 'child should has class .child')
-  childTestWrapper.type('span', 'child should has type span')
-  childTestWrapper.checkName('span', 'child should has name span')
-  childTestWrapper.checkKey('2', 'child should has key 2')
-  childTestWrapper.text('First Child', 'child should has text First Child')
+  childTestWrapper
+    .isSelector('.child', 'child should has class .child')
+    .hasClass('child', 'child should has class .child')
+    .type('span', 'child should has type span')
+    .checkName('span', 'child should has name span')
+    .checkKey('2', 'child should has key 2')
+    .text('First Child', 'child should has text First Child')
 
   childrenTestWrapper.lengthOf(2, 'should be 2 children elements')
 ```
