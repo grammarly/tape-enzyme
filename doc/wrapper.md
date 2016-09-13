@@ -5,8 +5,8 @@
 * *@param* { Object<EnzymeMount> } wrapper
 * *@return* { Object } test wrapper
 
-`Test wrapper` allows you to use all methods of [enzyme api](https://github.com/grammarly/tape-enzyme/blob/master/doc/enzyme.md), without using the `t.*` construction.
-Also it has some search methods, including: 
+`Test wrapper` allows you to use all methods of [enzyme api](https://github.com/grammarly/tape-enzyme/blob/master/doc/enzyme.md) without using the `t.*` construction.
+It also has some search methods, including: 
 
 * `at`
 * `childAt`
@@ -19,7 +19,7 @@ Also it has some search methods, including:
 * `parent`
 * `parents`
 
-The result of them will be a new `test wrapper`.
+The result will be a new `test wrapper`.
 
 Example:
 
