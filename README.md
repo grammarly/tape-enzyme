@@ -3,7 +3,7 @@
 [![npm Version](https://img.shields.io/npm/v/tape-enzyme.svg)](https://www.npmjs.com/package/tape-enzyme) ![License](https://img.shields.io/npm/l/tape-enzyme.svg)
 [![Build Status](https://travis-ci.org/grammarly/tape-enzyme.svg?branch=master)](https://travis-ci.org/grammarly/tape-enzyme)
 
-Tape-Enzyme is micro library, which help you use [tape](https://github.com/substack/tape) with [enzyme](https://github.com/airbnb/enzyme).
+Tape-Enzyme is a micro library that helps you use [tape](https://github.com/substack/tape) with [enzyme](https://github.com/airbnb/enzyme).
 
 ## Installation
 
@@ -22,7 +22,7 @@ Import library and use as `tape` test:
 import test from 'tape-enzyme'
 ```
 
-You can also add plugin to your current `tape` instance:
+You can also add plugins to your current `tape` instance:
 
 ```js
 import test from 'tape'
@@ -96,7 +96,7 @@ $ npm run test
 
 ## Contributing
 
-The main purpose of this library is to make writing tests with `tape` easier: less code while being more expressive and as robust as possible. If you think that we are missing any key features, please open a GitHub issue, or even better, a pull request. Any feedback you have about using `tape-enzyme` would be greatly appreciated.
+The main purpose of this library is to make writing tests with `tape` easier. It involves less code while being more expressive and as robust as possible. If you think that we are missing any key features, please open a GitHub issue, or even better, a pull request. Any feedback you have about using `tape-enzyme` would be greatly appreciated.
 
 
 ## License

@@ -1,6 +1,6 @@
 # Simple Api
 
-Use simple unit tests utils in tape:
+Use simple unit test utils in tape:
 
 ### .isTrue(value, [message])
 

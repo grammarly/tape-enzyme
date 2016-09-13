@@ -136,7 +136,7 @@ Check whether or not the current `wrapper` has `nodes` anywhere in its render tr
 * *@param* { Array<ReactElement> } nodes
 * *@param* { String } message
 
-Check if the current `wrapper` has `nodes` anywhere in its render tree that look like the one of the array passed in.
+Check if the current `wrapper` has `nodes` anywhere in its render tree that look like one of the array passed in.
 
 ```js
   const wrapper = mount(
@@ -311,7 +311,7 @@ Check `name` of the current node.
 * *@param* { String } value
 * *@param* { String } message
 
-Check the resulting of text content of the `node`.
+Check the resulting text content of the `node`.
 
 ```js
  const wrapper = mount(<div><b>important</b></div>)
