@@ -61,19 +61,17 @@ export default function around (tape, msg, _hooks) {
     return tape(newname, t => Promise.resolve()
       .then(invoke(hooks.before, t))
       .then(promisify(fn, t))
-      .then(args => {
-        invokeForce(hooks.after, t)(args)
-          .then(() => t.end())
-          .catch(errArgs => t.end(errArgs.error))
-      })
-      .catch(errArgs => {
-        invokeForce(hooks.after, t)(errArgs.args)
-          .then(() => t.end(errArgs.error))
-          .catch(errArgs2 => {
-            t.error(errArgs.error)
-            t.end(errArgs2.error)
-          })
-      }))
+      .then(args => invokeForce(hooks.after, t)(args)
+        .then(() => t.end())
+        .catch(errArgs => t.end(errArgs.error))
+      )
+      .catch(errArgs => invokeForce(hooks.after, t)(errArgs.args)
+        .then(() => t.end(errArgs.error))
+        .catch(errArgs2 => {
+          t.error(errArgs.error)
+          t.end(errArgs2.error)
+        })
+      ))
   }
 
   Object.keys(tape).forEach(key => test[key] = tape[key])
