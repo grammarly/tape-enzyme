@@ -23,6 +23,8 @@ const invokeForce = (hooks, t) => args => {
 const promisify = (fn, t) => args => {
   return new Promise(function(resolve, reject) {
     const tt = {...t, next, nextAdd, end}
+    t.on('end', end)
+    
     try {
       fn.apply(this, [tt].concat(args || []))
     }
