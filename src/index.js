@@ -15,7 +15,7 @@
  */
 
 import Tape from 'tape'
-import around from 'tape-around'
+import around from './utils/around'
 import simpleUtils from './utils/simple'
 import enzymeUtils from './utils/enzyme'
 import init from './utils/init'
@@ -44,7 +44,7 @@ export function registration(tape) {
   
   test.afterEach = cb => afterEach = cb
   test.beforeEach = cb => beforeEach = cb
-
+  
   return test
 }
 
