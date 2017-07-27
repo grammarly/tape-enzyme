@@ -1,6 +1,6 @@
 {
   "name": "tape-enzyme",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "tape-enzyme micro library",
   "directories": {
     "lib": "./lib"
@@ -53,6 +53,7 @@
   },
   "dependencies": {
     "tape": "4.6.0",
+    "tape-around": "2.2.0",
     "type-detect": "2.0.1"
   }
 }

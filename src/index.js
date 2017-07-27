@@ -15,6 +15,7 @@
  */
 
 import Tape from 'tape'
+import around from 'tape-around'
 import simpleUtils from './utils/simple'
 import enzymeUtils from './utils/enzyme'
 import init from './utils/init'
@@ -22,11 +23,29 @@ import wrapper from './utils/wrapper'
 
 export function registration(tape) {
   const utils = [enzymeUtils, simpleUtils]
-  tape.init = init(tape)
-  tape.init('wrapper', wrapper)
+ 
+  let afterEach = null
+  let beforeEach = null
+
+  let test = around(tape)
+    .before(t => {
+      beforeEach && beforeEach()
+      t.next()
+    })
+    .after(t => {
+      afterEach && afterEach()
+      t.next()
+    })
+
+  test.init = init(tape)
+  test.init('wrapper', wrapper)
   utils.forEach(util =>
-    Object.keys(util).forEach(key => tape.init(key, util[key])))
-  return tape
+    Object.keys(util).forEach(key => test.init(key, util[key])))
+  
+  test.afterEach = cb => afterEach = cb
+  test.beforeEach = cb => beforeEach = cb
+
+  return test
 }
 
 export default registration(Tape)
