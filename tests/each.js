@@ -1,5 +1,5 @@
 import test from '../src'
 
 let i = 0
-test.beforeEach(() => console.log(`>>>>> Test Start ${++i} <<<<<`))
-test.afterEach(() => console.log(`>>>>> Test END ${i} <<<<<\n`))
+test.beforeEach(() => console.log(`>>>>> TEST START ${++i} <<<<<`)) // eslint-disable-line no-console
+test.afterEach(() => console.log(`>>>>> TEST END ${i} <<<<<\n`)) // eslint-disable-line no-console

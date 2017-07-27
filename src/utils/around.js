@@ -23,10 +23,8 @@ export default function around (tape, msg, _hooks) {
   function run (name, fn, tape) {
     const newname = msg ? msg + ' ' + name : name
     return tape(newname, t => {
-      let _args
-      const block = Promise.resolve()
+      Promise.resolve()
         .then(invoke(hooks.before, t))
-        .then(args => _args = args)
         .then(promisify(fn, t))
         .then(args => {
           invokeForce(hooks.after, t)(args)
@@ -78,15 +76,15 @@ const promisify = (fn, t) => args => {
       return reject({error, args})
     }
 
-    function next () {
+    function next() {
       resolve([].slice.call(arguments))
     }
 
-    function nextAdd () {
+    function nextAdd() {
       resolve(args.concat([].slice.call(arguments)))
     }
 
-    function end (error) {
+    function end(error) {
       error ? reject({error, args}) : resolve(args)
     }
   })
