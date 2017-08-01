@@ -131,6 +131,7 @@ test('wrapper test - `getWrapper`', t => {
   t.text(wrapper.getWrapper(), 'First Child', 'child should have text First Child')
   t.end()
 })
+
 test('wrapper test - `chain`', t => {
   const wrapper = t.wrapper(mount(<Foo />).find('#child1'))
 
