@@ -10,5 +10,4 @@ test('async test', async t => {
   t.plan(1)
   await delay(0)
   t.ok(true)
-  
 })
